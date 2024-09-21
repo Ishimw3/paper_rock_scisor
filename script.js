@@ -16,22 +16,22 @@ function getComputerChoice() {
   choicePc = Math.floor(Math.random() * 3);
 
   if (choicePc < 0) {
-    return "rock";
+    return "ibuye";
   } else if (choicePc > 0) {
-    return "paper";
+    return "urupapuro";
   } else {
-    return "scisor";
+    return "umukasi";
   }
 }
 
 let pc = getComputerChoice();
 
 function getHumanChoice() {
-  let answer = prompt("paper, rock or scisor : ");
+  let answer = prompt("urupapuro, ibuye or umukasi : ");
 
   answer = answer.toLowerCase();
-  while (answer !== "rock" && answer !== "paper" && answer !== "scisor") {
-    answer = prompt("paper, rock or scisor: ");
+  while (answer !== "ibuye" && answer !== "urupapuro" && answer !== "umukasi") {
+    answer = prompt("urupapuro, ibuye or umukasi: ");
     answer = answer.toLowerCase();
   }
 
@@ -40,49 +40,49 @@ function getHumanChoice() {
 
 function compare(human, pc) {
   if (human == "1" + pc) {
-    scoreDisplay.textContent = "it's a Tie";
-    scoreDisplayPc.textContent = "it's a Tie";
+    scoreDisplay.textContent = "Mwanganyije";
+    scoreDisplayPc.textContent = "Mwanganyije";
     return 3;
   } else {
-    if (human === "1rock") {
+    if (human === "1ibuye") {
       switch (pc) {
-        case "paper":
-          scoreDisplayPc.textContent = "Computer won, +1";
-          scoreDisplay.textContent = "You lost";
+        case "urupapuro":
+          scoreDisplayPc.textContent = "Nyabwonko Yagukubise, +1";
+          scoreDisplay.textContent = "Waneshejwe";
           return 2;
           break;
 
-        case "scisor":
-          scoreDisplay.textContent = "You won, +1";
-          scoreDisplayPc.textContent = "You lost";
+        case "umukasi":
+          scoreDisplay.textContent = "Watsinze, +1";
+          scoreDisplayPc.textContent = "Waneshejwe";
           return 1;
           break;
       }
-    } else if (human == "1paper") {
+    } else if (human == "1urupapuro") {
       switch (pc) {
-        case "scisor":
-          scoreDisplayPc.textContent = "Computer won, +1";
-          scoreDisplay.textContent = "You lost";
+        case "umukasi":
+          scoreDisplayPc.textContent = "Nyabwonko Yagukubise, +1";
+          scoreDisplay.textContent = "Waneshejwe";
           return 2;
           break;
 
-        case "rock":
-          scoreDisplay.textContent = "You won, +1";
-          scoreDisplayPc.textContent = "You lost";
+        case "ibuye":
+          scoreDisplay.textContent = "Watsinze, +1";
+          scoreDisplayPc.textContent = "Waneshejwe";
           return 1;
           break;
       }
-    } else if (human == "1scisor") {
+    } else if (human == "1umukasi") {
       switch (pc) {
-        case "rock":
-          scoreDisplayPc.textContent = "Computer won, +1";
-          scoreDisplay.textContent = "You lost";
+        case "ibuye":
+          scoreDisplayPc.textContent = "Nyabwonko Yagukubise, +1";
+          scoreDisplay.textContent = "Waneshejwe";
           return 2;
           break;
 
-        case "paper":
-          scoreDisplay.textContent = "You won, +1";
-          scoreDisplayPc.textContent = "You lost";
+        case "urupapuro":
+          scoreDisplay.textContent = "Watsinze, +1";
+          scoreDisplayPc.textContent = "Waneshejwe";
           return 1;
           break;
       }
