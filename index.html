@@ -1,12 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Document</title>
-</head>
-<body>
-    <button onclick="playRound();">play</button>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="title">Rock Paper Scissor</div>
+      <div class="playground">
+        <div class="human">
+          <div class="head">You</div>
+          <div class="action">
+            <button class="player active" id="1rock">
+              <img src="rock1.png" alt="" srcset="" />
+            </button>
+            <button class="player active" id="1paper">
+              <img src="paper.png" alt="" />
+            </button>
+            <button class="player active" id="1scisor">
+              <img src="scissor.png" alt="" />
+            </button>
+          </div>
+          <div class="result1">...</div>
+        </div>
+
+        <div class="vs">
+          <p>VS</p>
+          <p class="score">-</p>
+        </div>
+
+        <div class="robot">
+          <div class="head">Robot</div>
+          <div class="action">
+            <img
+              src="200w.gif"
+              alt=""
+              id="hint"
+              style="transform: unset; width: unset; height: unset"
+              class="pc active"
+            />
+            <img src="rock1.png" alt="" id="rock" class="pc" />
+            <img src="paper.png" alt="" id="paper" class="pc" />
+            <img src="scissor.png" alt="" id="scisor" class="pc" />
+          </div>
+          <div class="result">...</div>
+        </div>
+      </div>
+      <button onclick="reset();" class="again">Reset Score</button>
+    </div>
+
+
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

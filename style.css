@@ -1,0 +1,109 @@
+@font-face {
+  font-family: "electrox";
+  src: url("electrox/electrox-webfont.woff2") format("woff2"),
+    url("electrox/electrox-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  background: url("bg.jpg");
+  background-size: cover;
+}
+
+* {
+  font-family: "electrox";
+}
+
+.action,
+.robot {
+  width: 500px;
+}
+
+.action button img {
+  height: 150px;
+  width: 150px;
+  flex: 1 1 0px;
+}
+
+.player {
+  display: none;
+  transition: .5s ease-in-out;
+}
+
+.player.active {
+  display: inline;
+  transition: 0.5s ease-in-out;
+}
+
+.robot .action img {
+  height: 150px;
+  width: 150px;
+  transform: scaleX(-1);
+  flex: 1 1 0px;
+}
+
+.pc {
+  display: none;
+}
+
+.pc.active {
+  display: inline;
+}
+
+.playground {
+  display: flex;
+  margin-bottom: -40px;
+  transform: scale(0.8);
+  gap: 40px;
+  margin-top: -40px;
+  align-content: space-around;
+  align-items: center;
+  justify-content: space-around;
+  line-height: -30px;
+}
+
+.container {
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-align: center;
+  font-size: 100px;
+  z-index: 1;
+  margin-bottom: -30px;
+}
+
+.again {
+  display: flex;
+  width: 300px;
+  font-size: 50px;
+  margin: auto;
+  justify-content: center;
+  transition: .5s ease-in-out;
+  z-index: 0;
+}
+
+.result,
+.result1 {
+  font-size: 40px;
+}
+
+.vs {
+  transform: translateY(-90px);
+  width: 400px;
+}
+
+.title {
+  background-color: #90632c;
+  clip-path: polygon(20% 0, 100% 30%, 80% 80%, 10% 100%);
+  color: #fff;
+}
+
+button {
+    background-color: transparent;
+}
+
+button:is(:hover, :focus) {
+    transform: scale(1.05);
+}
