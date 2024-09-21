@@ -98,6 +98,7 @@ html {
   background-color: #90632c;
   clip-path: polygon(20% 0, 100% 30%, 80% 80%, 10% 100%);
   color: #fff;
+  padding: 20px;
 }
 
 button {
@@ -107,3 +108,92 @@ button {
 button:is(:hover, :focus) {
     transform: scale(1.05);
 }
+
+/* Media queries pour les tablettes */
+@media (max-width: 768px) {
+  .container {
+    font-size: 80px;
+  }
+
+  .title {
+    height: 200px;
+    font-size: 80px;
+    padding: 40px;
+  }
+
+  .again {
+    font-size: 40px;
+  }
+
+  .result,
+  .result1 {
+    font-size: 30px;
+  }
+
+  .vs {
+    width: 300px;
+  }
+
+  .playground {
+    flex-direction: column;
+    transform: scale(0.7);
+    gap: 20px;
+  }
+
+  .action,
+  .robot {
+    display: block;
+    width: 100%;
+  }
+
+  .action button img,
+  .robot .action img {
+    height: 100px;
+    width: 100px;
+  }
+}
+
+/* Media queries pour les petits écrans */
+@media (max-width: 480px) {
+  .container {
+    font-size: 60px;
+  }
+
+  .title {
+    font-size: 60px;
+    height: auto;
+    padding: 40px;
+  }
+
+  .again {
+    font-size: 30px;
+  }
+
+  .result,
+  .result1 {
+    font-size: 40px;
+  }
+
+  .vs {
+    width: 200px;
+  }
+
+  .playground {
+    flex-direction: column;
+    transform: scale(0.7);
+    gap: 10px;
+  }
+
+  .action,
+  .robot {
+    display: block;
+    width: 100%;
+  }
+
+  .action button img,
+  .robot .action img {
+    height: 150px;
+    width: 150px;
+  }
+}
+
